@@ -4,6 +4,17 @@
 
 ![OpenSSH logo](https://raw.githubusercontent.com/atmoz/sftp/master/openssh.png "Powered by OpenSSH")
 
+# Fork Info: Do not use
+- This fork uses an older version of ssh/debian to be compatible with a possibly abandoned ios comicreader "Chunky"
+- This adds tcpwrappers to the image
+```
+    volumes:
+        - sftp_config:/etc/ssh
+        - some_vol:/home/user/comics:ro
+        - /docker/volumes/sftp/hosts.allow:/etc/hosts.allow
+        - /docker/volumes/sftp/hosts.deny:/etc/hosts.deny
+```
+
 # Supported tags and respective `Dockerfile` links
 
 - [`debian`, `latest` (*Dockerfile*)](https://github.com/atmoz/sftp/blob/master/Dockerfile) ![Docker Image Size (debian)](https://img.shields.io/docker/image-size/atmoz/sftp/debian?label=debian&logo=debian&style=plastic)
